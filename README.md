@@ -2,6 +2,8 @@
 
 A fully responsive, aesthetically pleasing e-commerce landing page clone of Nike, built with HTML, CSS, and JavaScript.
 
+🔗 **Live Demo:** https://yourxharsh19.github.io/Nike-LandingPage-Clone/
+
 ## 🚀 Features
 
 - **Responsive Design**: Works seamlessly on Mobile, Tablet, and Desktop.
