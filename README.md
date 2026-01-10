@@ -1,50 +1,29 @@
-<div align="center">
-  
-  ![GitHub repo size](https://img.shields.io/github/repo-size/geeky-prashant/responsive-nike-clone)
-  ![GitHub stars](https://img.shields.io/github/stars/geeky-prashant/responsive-nike-clone)
-  ![GitHub forks](https://img.shields.io/github/forks/geeky-prashant/responsive-nike-clone?style=social)
-  [![Twitter Follow](https://img.shields.io/twitter/follow/geekyprashant?style=social)](https://twitter.com/intent/follow?screen_name=geekyprashant)
- 
-  <br />
+# Nike Clone Website
 
-  <h2 align="center">Responsive Nike Clone</h2>
+A fully responsive, aesthetically pleasing e-commerce landing page clone of Nike, built with HTML, CSS, and JavaScript.
 
-  In this project, I have created Responsive Nike Clone, The project is built using HTML5, CSS3 & JavaScript.
+## 🚀 Features
 
-  <a href="https://geeky-prashant.github.io/responsive-nike-clone/"><strong>➥ Live Demo</strong></a>
+- **Responsive Design**: Works seamlessly on Mobile, Tablet, and Desktop.
+- **Interactive Slider**: Custom-built product slider with color-matching backgrounds.
+- **Dynamic Product Rendering**: Click on slider items to update the main product display.
+- **Modern UI**:
+    - Animated Navigation
+    - Payment Modal with backdrop styling
+    - Hover effects and transitions
+- **Developer Credits**: Footer attribution.
 
-</div>
+## 🛠️ Technologies Used
 
-### Demo Screeshots
+- **HTML5**: Semantic structure.
+- **CSS3**: CSS Variables, Flexbox, Grid, Media Queries, and Animations.
+- **JavaScript**: basic DOM manipulation for interactivity.
 
-![Responsive Nike Clone Desktop Demo](./readme-images/Responsive-Ecommerce-Website.png "Desktop Demo")
+## 📦 How to Run
 
-### Prerequisites
+1. Clone the repository or download the files.
+2. Open `index.html` in any modern web browser.
 
-Before you begin, ensure you have met the following requirements:
+## 👨‍💻 Developer
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
-
-### Run Locally
-
-To run **responsive-nike-clone** locally, run this command on your git bash:
-
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/geeky-prashant/responsive-nike-clone.git
-```
-
-Windows:
-
-```bash
-git clone https://github.com/geeky-prashant/responsive-nike-clone.git
-```
-
-### Contact
-
-If you want to contact me you can reach me at [Twitter](https://www.twitter.com/geekyprashant).
-
-### License
-
-This project is **free to use** and does not contains any license.
+Developed By **Harshdeep Singh**

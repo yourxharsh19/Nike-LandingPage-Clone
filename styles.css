@@ -1,83 +1,131 @@
+:root {
+  --primary-color: #111;
+  --secondary-color: #369e62;
+  --accent-color: rgb(16, 192, 205);
+  --text-color: #fff;
+  --gray-text: lightgray;
+  --bg-color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
-nav {
-  background-color: #111;
-  color: #fff;
-  padding: 20px 50px;
+
+html {
+  scroll-behavior: smooth;
 }
+
+nav {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 20px 50px;
+  position: relative;
+  z-index: 100;
+}
+
 .navTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
-  margin-top: -5px;
+  gap: 50px;
+  /* Increased gap */
 }
+
 .logo {
   cursor: pointer;
-  width: 50px;
-  margin-right: 50px;
 }
-form {
-  background: #fff;
-  width: 400px;
-  height: 35px;
+
+.logoLink {
   display: flex;
-  border-radius: 60px;
+  /* Removes default anchor display issues */
+  align-items: center;
 }
-form input {
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  /* Lighter background */
+  padding: 8px 15px;
+  /* Reduced padding */
+  border-radius: 20px;
+  /* Softer radius */
+  border: 1px solid transparent;
+  /* Prepare for focus border */
+  transition: all 0.3s ease;
+}
+
+.search:focus-within {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid lightgray;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  /* Remove default outline */
   flex: 1;
-  border: none;
-  outline: none;
+  font-size: 14px;
 }
-form button {
-  background: rgb(41, 177, 41);
-  padding: 10px 40px;
-  border: none;
-  outline: none;
-  color: #fff;
-  letter-spacing: 1px;
-  cursor: pointer;
-  border-top-right-radius: 60px;
-  border-bottom-right-radius: 60px;
+
+.searchInput::placeholder {
+  color: gray;
 }
-form .searchIcon {
-  align-self: center;
-  width: 35px;
-  height: 35px;
-  padding: 10px;
-}
+
 .limitedOffer {
   font-size: 20px;
   border-bottom: 2px solid green;
   cursor: pointer;
 }
+
 .navBottom {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .menuItem {
-  padding-left: 25px;
-  padding-right: 25px;
-  font-size: 15px;
-  color: lightgrey;
+  margin-right: 50px;
   cursor: pointer;
-  font-weight: 500;
+  color: lightgray;
+  font-weight: 400;
+  padding: 5px 10px;
+  /* Added padding */
 }
+
+.menuIcon {
+  display: none;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
 .slider {
   background: url(images/background.jpg);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   overflow: hidden;
 }
+
 .sliderWrapper {
   display: flex;
   width: 500vw;
   transition: all 1.5s ease-in-out;
 }
+
 .sliderItem {
   width: 500vw;
   display: flex;
@@ -85,6 +133,7 @@ form .searchIcon {
   justify-content: center;
   position: relative;
 }
+
 .sliderBg {
   width: 380px;
   height: 380px;
@@ -94,6 +143,7 @@ form .searchIcon {
   align-items: center;
   margin-top: -30px;
 }
+
 .sliderTitle {
   position: absolute;
   top: 20%;
@@ -104,6 +154,7 @@ form .searchIcon {
   color: rgba(223, 223, 223, 0.739);
   z-index: 1;
 }
+
 .sliderPrice {
   position: absolute;
   top: 20%;
@@ -114,6 +165,7 @@ form .searchIcon {
   border-bottom: 1px solid #ffff;
   z-index: 1;
 }
+
 .sliderImg {
   padding: 50px;
   width: 490px;
@@ -121,6 +173,7 @@ form .searchIcon {
   margin-bottom: 20px;
   z-index: 1;
 }
+
 .buyButton {
   position: absolute;
   top: 60%;
@@ -129,29 +182,35 @@ form .searchIcon {
   padding: 10px 20px 10px 20px;
   font-weight: 500;
   color: #fff;
-  background: green;
+  background: rgb(0, 36, 128);
   border: 1px solid rgba(181, 180, 180, 0.739);
   border-radius: 25px;
   z-index: 1;
   cursor: pointer;
 }
+
 .buyButton:hover {
   background-color: #111;
   color: #fff;
   transition: 0.5s;
 }
+
 .sliderItem:nth-child(1) .sliderBg {
   background-color: rgb(223, 223, 131);
 }
+
 .sliderItem:nth-child(2) .sliderBg {
   background-color: rgb(184, 132, 237);
 }
+
 .sliderItem:nth-child(3) .sliderBg {
   background-color: #369e62;
 }
+
 .sliderItem:nth-child(4) .sliderBg {
   background-color: pink;
 }
+
 .sliderItem:nth-child(5) .sliderBg {
   background-color: sandybrown;
 }
@@ -159,18 +218,23 @@ form .searchIcon {
 .sliderItem:nth-child(1) .sliderPrice {
   color: rgb(223, 223, 131);
 }
+
 .sliderItem:nth-child(2) .sliderPrice {
   color: rgb(184, 132, 237);
 }
+
 .sliderItem:nth-child(3) .sliderPrice {
   color: #369e62;
 }
+
 .sliderItem:nth-child(4) .sliderPrice {
   color: pink;
 }
+
 .sliderItem:nth-child(5) .sliderPrice {
   color: sandybrown;
 }
+
 .features {
   display: flex;
   align-items: center;
@@ -179,49 +243,58 @@ form .searchIcon {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
 .feature {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
+
 .featureIcon {
   width: 50px;
   height: 50px;
   cursor: pointer;
 }
+
 .featureTitle {
   font-size: 20px;
   font-weight: 600;
   margin: 10px;
 }
+
 .featureDesc {
   color: rgb(88, 87, 87);
   width: 80%;
   height: 50px;
 }
+
 .product {
   height: 100vh;
   background-color: rgba(192, 192, 192, 0.653);
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
   position: relative;
 }
+
 .productImg {
   width: 30%;
   margin-top: 100px;
   margin-left: 180px;
 }
+
 .productDetails {
   position: absolute;
   top: 22%;
   right: 10%;
   width: 40%;
 }
+
 .productTitle {
   font-size: 40px;
   font-weight: 900;
   margin-bottom: 8px;
 }
+
 .productMrp {
   font-size: 20px;
   margin: 8px;
@@ -232,22 +305,26 @@ form .searchIcon {
   color: #333;
   text-decoration: line-through;
 }
+
 .productPrice {
   font-size: 28px;
-  color: #055527;
+  color: #026f80;
   display: inline-block;
   margin-bottom: 20px;
   margin-left: -3px;
 }
+
 .productDesc {
   font-size: 20px;
   color: #333;
 }
+
 .colors,
 .sizes {
   display: flex;
   margin-bottom: 16px;
 }
+
 .color {
   width: 32px;
   height: 32px;
@@ -257,9 +334,11 @@ form .searchIcon {
   cursor: pointer;
   margin-left: -2px;
 }
+
 .color:last-child {
   background-color: #098f6b;
 }
+
 .size {
   padding: 5px 20px;
   border: 1px solid #333;
@@ -269,13 +348,15 @@ form .searchIcon {
   font-size: 18px;
   margin-bottom: 2px;
 }
+
 .size:hover {
   background-color: #333;
   color: #fff;
 }
+
 .productButton {
   padding: 10px 30px;
-  background-color: #055527;
+  background-color: #042776;
   color: #fff;
   outline: none;
   border: none;
@@ -286,32 +367,33 @@ form .searchIcon {
   cursor: pointer;
   font-weight: 600;
 }
+
 .payment {
   width: 500px;
   height: 500px;
   background-color: #fff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  padding: 30px 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 50px;
   display: none;
   flex-direction: column;
-  border-radius: 15px;
-  -webkit-box-shadow: 0px 0px 13px 2px rgb(82, 81, 81);
-  box-shadow: 0px 0px 13px 2px rgb(82, 81, 81);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  z-index: 999;
 }
+
 .payTitle {
   font-size: 20px;
   color: lightslategray;
   margin-bottom: 10px;
 }
+
 label {
   font-size: 14px;
   font-weight: 500;
 }
+
 .payInput {
   padding: 6px;
   margin: 6px 0px;
@@ -319,24 +401,30 @@ label {
   border-bottom: 1px solid lightslategray;
   outline: none;
 }
+
 .payInput::placeholder {
   color: lightslategray;
 }
+
 .cardIcons {
   display: flex;
 }
+
 .cardIcon {
   margin-right: 10px;
 }
+
 .cardIcon {
   display: flex;
   justify-content: space-between;
 }
+
 .sm {
   width: 30%;
   padding: 6px;
   margin: 6px 6px;
 }
+
 .payButton {
   height: 50px;
   width: 100%;
@@ -351,6 +439,7 @@ label {
   font-family: "Poppins", sans-serif;
   cursor: pointer;
 }
+
 .close {
   width: 20px;
   height: 20px;
@@ -366,20 +455,24 @@ label {
   justify-content: center;
   cursor: pointer;
 }
+
 .gallery {
   margin: 20px 10px;
   padding: 50px;
   display: flex;
 }
+
 .galleryItem {
   flex: 1;
   padding: 15px;
 }
+
 .galleryImg {
   width: 100%;
   border-radius: 20px;
   cursor: pointer;
 }
+
 .galleryTitle {
   font-size: 25px;
   text-align: center;
@@ -387,10 +480,12 @@ label {
   font-family: "Poppins", sans-serif;
   margin-top: 12px;
 }
+
 .newSeason {
   display: flex;
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 }
+
 .nsItem {
   flex: 1;
   background-color: #333;
@@ -400,13 +495,16 @@ label {
   align-items: center;
   justify-content: center;
 }
+
 .nsImg {
   width: 100%;
   height: 600px;
 }
+
 .nsTitle {
   font-size: 40px;
 }
+
 .nsButton {
   padding: 15px 25px;
   font-weight: 600;
@@ -415,41 +513,55 @@ label {
   outline: none;
   border: none;
 }
+
 footer {
   display: flex;
   margin: 25px 55px;
+  flex-wrap: wrap;
+  /* Allow wrapping */
 }
+
 .footerLeft {
   flex: 2;
   display: flex;
   justify-content: space-between;
-  padding: 50px;
 }
+
 .fMenuTitle {
   font-size: 20px;
   margin-bottom: 12px;
 }
+
 .fList {
   padding: 0;
   list-style: none;
 }
+
 .fListItem {
   margin-bottom: 8px;
   color: rgb(94, 94, 94);
   cursor: pointer;
 }
-.footerRight {
-  flex: 1;
-  padding: 50px;
+
+.footerRightMenu {
+  flex: 100%;
+  /* Force full width */
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  /* Center horizontally */
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid lightgray;
+  /* Optional: add separator */
 }
+
 .fInput {
   padding: 5px;
   border: none;
   outline: 1px solid #333;
 }
+
 .fButton {
   padding: 6px;
   background-color: #333;
@@ -459,9 +571,11 @@ footer {
   border: none;
   margin-left: 3px;
 }
+
 .fIcons {
   display: flex;
 }
+
 .fIcon {
   width: 25px;
   height: 25px;
@@ -470,10 +584,12 @@ footer {
   margin-bottom: -5px;
   cursor: pointer;
 }
+
 .copyright {
   font-weight: 500;
   font-size: 14px;
 }
+
 .link {
   text-decoration: none;
   font-weight: 600;
@@ -486,106 +602,157 @@ footer {
   nav {
     padding: 20px;
   }
+
   .search {
     display: none;
   }
+
+  .menuIcon {
+    display: flex;
+    z-index: 100;
+  }
+
   .navBottom {
-    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #111;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
   }
+
+  .navBottom.active {
+    transform: translateX(0);
+  }
+
   .menuItem {
-    margin: 5px;
-    padding: 5px;
+    margin: 20px 0;
+    font-size: 25px;
     font-weight: 700;
-    font-size: 14px;
+    color: white;
   }
+
+
+
   .slider {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
     padding-bottom: 40px;
   }
+
   .sliderImg {
     width: 90%;
     height: 90%;
   }
+
   .sliderBg {
     width: 60%;
     height: 60%;
   }
+
   .sliderTitle {
     display: none;
   }
+
   .sliderPrice {
-    top: 8%;
-    left: 6%;
-    font-size: 32px;
+    top: 10%;
+    left: 10%;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: white;
+    padding: 5px;
   }
+
   .buyButton {
     top: unset;
-    right: 6%;
-    bottom: 2%;
+    right: 10%;
+    bottom: 5%;
     font-size: 15px;
+    font-weight: 900;
+    background-color: #111;
   }
+
   .features {
     flex-direction: column;
     padding: 20px;
     margin-top: 5px;
     margin-bottom: -2px;
   }
+
   .feature {
     padding: 20px;
   }
+
   .featureIcon {
     width: 60px;
     height: 60px;
   }
+
   .product {
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 920px;
+    height: auto;
+    padding-bottom: 50px;
+    position: relative;
   }
+
   .productImg {
-    width: 70%;
-    margin-top: 90px;
-    margin-bottom: -180px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 60%;
+    margin-top: 50px;
+    margin-bottom: 20px;
   }
+
   .productDetails {
     width: 100%;
-    padding: 30px;
-    right: 0%;
+    padding: 20px;
+    position: static;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    position: relative;
   }
+
   .productTitle {
-    font-size: 25px;
+    font-size: 30px;
+    margin-bottom: 15px;
   }
+
   .productDesc {
-    margin-top: -20px;
+    margin-bottom: 20px;
+    font-size: 18px;
   }
+
   .productMrp {
     display: none;
   }
+
   .productButton {
     padding: 15px 50px;
   }
+
   .payment {
     width: 350px;
     padding: 25px 20px;
   }
+
   .payButton {
     height: 100px;
     margin-top: 22px;
   }
+
   .sm {
     width: 28%;
     padding: 6px;
     margin: 6px 6px;
   }
+
   .gallery {
     display: flex;
     flex-direction: column;
@@ -593,53 +760,66 @@ footer {
     margin-top: 50px;
     margin-bottom: 40px;
   }
+
   .newSeason {
     flex-direction: column;
     clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
   }
+
   .nsItem:nth-child(2) {
     padding: 60px;
   }
+
   .nsTitleSm {
     text-align: center;
   }
+
   .nsTitle {
     text-align: center;
     font-size: 30px;
   }
+
   footer {
     flex-direction: column;
     align-items: center;
-    margin: 40px 5px;
+    background-color: whitesmoke;
+    padding: 20px;
   }
+
   .footerLeft {
-    padding: 25px;
+    padding: 20px;
     width: 100%;
-  }
-  .footerRight {
-    width: 100%;
-    padding: 0px;
-    margin-bottom: 20px;
-    align-items: center;
-  }
-  .fMenuTitle {
     text-align: center;
   }
+
+  .footerRightMenu {
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    /* Center horizontally */
+    text-align: center;
+    background-color: whitesmoke;
+  }
+
+  .fMenuTitle {
+    text-align: center;
+    font-size: 18px;
+  }
+
   .fInput {
     padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
   }
+
   .fButton {
-    padding: 12px;
+    padding: 10px;
+    width: 100%;
   }
-  .fInput {
-    margin-bottom: 20px;
-  }
+
   .fIcons {
-    margin-bottom: 20px;
-  }
-  .fIcon {
-    width: 28px;
-    height: 28px;
-    margin-left: 5px;
+    justify-content: center;
+    margin: 20px 0;
   }
 }

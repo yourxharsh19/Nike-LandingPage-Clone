@@ -1,9 +1,18 @@
 const wrapper = document.querySelector(".sliderWrapper");
+const menuIcon = document.querySelector(".menuIcon");
+const navBottom = document.querySelector(".navBottom");
 const menuItems = document.querySelectorAll(".menuItem");
+
+menuIcon.addEventListener("click", () => {
+    navBottom.classList.toggle("active");
+});
 
 menuItems.forEach((item, index) => {
   item.addEventListener("click", () => {
     //change the current slide
+    if (window.innerWidth <= 600) {
+        navBottom.classList.remove("active");
+    }
     wrapper.style.transform = `translateX(${-100 * index}vw)`;
   });
 });
